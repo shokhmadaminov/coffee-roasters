@@ -27,8 +27,13 @@
 /* CUSTOM PROOPS */
 :root {
     --text-color: #333;
-    --accent-green-color: #0a775f;
-    --outline-color: var(--accent-green-color);
+    --accent-color-green: #0a775f;
+    --accent-color-green-08: rgba(10, 120, 96, 0.8);
+    --accent-color-green-06: rgba(10, 120, 96, 0.6);
+    --accent-color-burlywood: #c99b67;
+    --accent-color-burlywood-08: rgb(201, 155, 103, 0.8);
+    --accent-color-burlywood-06: rgb(201, 155, 103, 0.6);
+    --outline-color: var(--accent-color-green);
 }
 
 /* GLOBAL STYLES */
@@ -71,10 +76,34 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+/* BUTTON STYLES */
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.75px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 16px 24px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    display: inline-block;
+}
+.button-green {
+    background-color: var(--accent-color-green);
+    color: #fff;
+}
+.button-burlywood {
+    background-color: var(--accent-color-burlywood);
+    color: #fff;
+}
 
 
 /* HEADER AND HERO WRAPPER STYLES */
 .header-and-hero-wrapper {
+    background-color: burlywood;
     background-image: url("../images/burlywood-bg.jpg");
 }
 
@@ -115,6 +144,41 @@ img {
     text-decoration: none;
     text-transform: uppercase;
     display: block;
+}
+
+/* HERO SECTION STYLES */
+.hero {
+
+}
+.hero-container {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+}
+.hero-text-wrapper {
+    width: 100%;
+    max-width: 730px;
+    padding: 116px 116px 100px 150px;
+}
+.hero-title {
+    width: 447px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+.hero-text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 34px;
+}
+.hero-img {
+    width: 710px;
+    height: 696px;
+    object-fit: cover;
 }
 
 
