@@ -11,7 +11,7 @@
     font-family: "Roboto";
     src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
     url("../fonts/Roboto-Medium.woff") format("woff");
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -19,7 +19,7 @@
     font-family: "Roboto";
     src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
     url("../fonts/Roboto-Bold.woff") format("woff");
-    font-weight: normal;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
@@ -27,6 +27,8 @@
 /* CUSTOM PROOPS */
 :root {
     --text-color: #333;
+    --accent-green-color: #0a775f;
+    --outline-color: var(--accent-green-color);
 }
 
 /* GLOBAL STYLES */
@@ -38,8 +40,8 @@
     padding: 0;
 }
 *:focus {
-    outline: #000 1px dashed;
-    outline-offset: 5px;
+    outline: var(--outline-color) 1px dashed;
+    outline-offset: 3px;
 }
 html {
     height: 100%;
@@ -63,14 +65,70 @@ img {
 /* CONTAINER SYTLES */
 .container {
     width: 100%;
-    max-width: 1240px;
+    max-width: 1440px;
     padding-left: 20px;
     padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* MAIN SECTION */
-.main {
-    flex-grow: 1;
+
+/* HEADER AND HERO WRAPPER STYLES */
+.header-and-hero-wrapper {
+    background-image: url("../images/burlywood-bg.jpg");
+}
+
+/* SITE HEADER STYLES */
+.site-header {
+    padding: 40px 0px;
+}
+.site-header-container {
+    padding: 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.site-header-logo {
+    text-decoration: none;
+    display: flex;
+}
+.site-header-logo-img {
+    width: 235px;
+    height: 24px;
+    object-fit: contain;
+}
+/* SITENAV STYLES */
+.sitenav-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.sitenav-item:not(:last-child) {
+    margin-right: 40px;
+}
+.sitenav-link {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+}
+
+
+
+
+/* RETINA BACKGROUND IMG */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .header-and-hero-wrapper {
+        background-image: url("../images/burlywood-bg@2x.jpg");
+    }
 }
