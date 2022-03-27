@@ -105,6 +105,7 @@ img {
 .header-and-hero-wrapper {
     background-color: burlywood;
     background-image: url("../images/burlywood-bg.jpg");
+    position: relative;
 }
 
 /* SITE HEADER STYLES */
@@ -147,6 +148,15 @@ img {
 }
 
 /* HERO SECTION STYLES */
+.hero-logo-img {
+    width: 213px;
+    height: 213px;
+    object-fit: contain;
+    position: absolute;
+    top: 22.5px;
+    left: calc(50% + 27px);
+    transform: translate(-50%);
+}
 .hero-container {
     display: flex;
     padding-left: 0;
